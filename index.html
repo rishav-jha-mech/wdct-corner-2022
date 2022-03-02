@@ -11,14 +11,7 @@
     />
     <link rel="stylesheet" href="https://use.typekit.net/skn8ash.css" />
     <link rel="stylesheet" href="./style.css" />
-    <script>
-      THREE.ShapeUtils.triangulateShape = (function () {
-        var pnlTriangulator = new PNLTRI.Triangulator();
-        return function triangulateShape(contour, holes) {
-          return pnlTriangulator.triangulate_polygon([contour].concat(holes));
-        };
-      })();
-    </script>
+    
   </head>
   <body>
     <!-- partial:index.partial.html -->
@@ -120,7 +113,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js"></script>
     <script src="./script.js"></script>
+    <script>
+      THREE.ShapeUtils.triangulateShape = (function () {
+        var pnlTriangulator = new PNLTRI.Triangulator();
+        return function triangulateShape(contour, holes) {
+          return pnlTriangulator.triangulate_polygon([contour].concat(holes));
+        };
+      })();
+    </script>
     <script src="./newscript.js"></script>
-    <script src="./loadingscript.js"></script>
+    <script>
+      document.onreadystatechange = function() {
+        if (document.readyState !== "complete") {
+            console.log("loaded");
+            setTimeout(() => {
+                loadend();
+            }, 11300);
+        } else {
+            console.log("not loaded");
+            setTimeout(() => {
+                loadend();
+            }, 11300);
+        }
+    };
+      function loadend() {
+        document.getElementById('three-container').style.display= "none";
+        // document.getElementById('gallery').style.display= "flex";
+        document.getElementById('welcome-section').style.display= "flex";
+    }
+    </script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-console.clear();
+
 gsap.registerPlugin(ScrollTrigger);
 
 const additionalY = { val: 0 };
@@ -24,7 +24,7 @@ cols.forEach((col, i) => {
       y: direction + Number(columnHeight / 2),
       duration: 20,
       repeat: -1,
-      ease: "none",
+      // ease: "none",
       modifiers: {
         y: gsap.utils.unitize((y) => {
           if (direction == "+=") {

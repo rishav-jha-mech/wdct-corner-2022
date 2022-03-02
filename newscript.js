@@ -1,5 +1,6 @@
 window.onload = init;
 
+
 function init() {
   var root = new THREERoot({
     createCameraControls:!true,
@@ -34,7 +35,7 @@ function init() {
 }
 
 function createTextAnimation() {
-  var geometry = generateTextGeometry('AS THE WORLD TURNS', {
+  var geometry = generateTextGeometry('WDCT CORNER', {
     size:40,
     height:12,
     font:'droid sans',
