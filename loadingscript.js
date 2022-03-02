@@ -3,12 +3,12 @@ document.onreadystatechange = function() {
         console.log("loaded");
         setTimeout(() => {
             loadend();
-        }, 7000);
+        }, 11000);
     } else {
         console.log("not loaded");
         setTimeout(() => {
             loadend();
-        }, 7000);
+        }, 11000);
     }
 };
 
