@@ -9,9 +9,11 @@
       content="A triple view diagonal slideshow with content preview."
     />
     <meta name="keywords" content="" />
+    <meta name="theme-color" content="#370665">
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
       document.documentElement.className = "js";
       var supportsCssVars = function () {
@@ -35,11 +37,26 @@
         );
     </script>
   </head>
-  <body style="padding: 0;">
+  <body style="padding: 0;" id="boody">
 
     <!-- Capture the press -->
-    <div class="overflay">
-      <button></button>
+    <div class="overlay" id="modal1">
+      <div class="modal-card">
+        <h1>Welcome To WDCT Corner</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed consectetur error, aliquam eveniet beatae a eligendi inventore voluptatem aperiam harum quo illum sequi non placeat modi, ad dolor quae eius nisi officia fugiat sapiente expedita. Voluptatum beatae voluptas deserunt veritatis!
+        </p>
+        <button onclick="callFull()">Click to Continue</button>
+      </div>
+    </div>
+
+    <!-- Modals for small Devices -->
+
+    <div class="modal" id="modal2">
+        <button onclick="modaltoggle2()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-card">
+        <img id="modal-img" src="./img/1.jpg" alt="">
+      </div>
     </div>
 
     <svg class="hidden">
@@ -247,6 +264,7 @@
             get carried away - we have plenty of time. Put your feelings into
             it, your heart, it's your world. These trees are so much fun. I get
             started on them and I have a hard time stopping.
+            <button class="btn" onclick="modaltoggle2('1.jpg')">Show Art</button>
           </div>
         </div>
         <div class="content__item">
@@ -265,6 +283,7 @@
             plenty of time. Put your feelings into it, your heart, it's your
             world. These trees are so much fun. I get started on them and I have
             a hard time stopping.
+            <button class="btn" onclick="modaltoggle2('2.jpg')">Show Art</button>
           </div>
         </div>
         <div class="content__item">
@@ -276,10 +295,8 @@
             can do so much. Work on one thing at a time. Don't get carried away
             - we have plenty of time. Put your feelings into it, your heart,
             it's your world. These trees are so much fun. I get started on them
-            and I have a hard time stopping. But we're not there yet, so we
-            don't need to worry about it. Now let's put some happy little clouds
-            in here. What the devil. A thin paint will stick to a thick paint.
-            I'm going to mix up a little color.
+            and I have a hard time stopping.
+            <button class="btn" onclick="modaltoggle2('3.jpg')">Show Art</button>
           </div>
         </div>
         <div class="content__item">
@@ -300,6 +317,7 @@
             carried away - we have plenty of time. Put your feelings into it,
             your heart, it's your world. These trees are so much fun. I get
             started on them and I have a hard time stopping.
+            <button class="btn" onclick="modaltoggle2('4.jpg')">Show Art</button>
           </div>
         </div>
         <div class="content__item">
@@ -320,6 +338,7 @@
             Put your feelings into it, your heart, it's your world. These trees
             are so much fun. I get started on them and I have a hard time
             stopping.
+            <button class="btn" onclick="modaltoggle2('5.gif')">Show Art</button>
           </div>
         </div>
         <div class="content__item">
@@ -338,6 +357,7 @@
             get carried away - we have plenty of time. Put your feelings into
             it, your heart, it's your world. These trees are so much fun. I get
             started on them and I have a hard time stopping.
+            <button class="btn" onclick="modaltoggle2('6.jpg')">Show Art</button>
           </div>
         </div>
         <div class="content__item">
@@ -356,6 +376,7 @@
             get carried away - we have plenty of time. Put your feelings into
             it, your heart, it's your world. These trees are so much fun. I get
             started on them and I have a hard time stopping.
+            <button class="btn" onclick="modaltoggle2('8.gif')">Show Art</button>
           </div>
         </div>
         <div class="content__item">
@@ -374,6 +395,7 @@
             get carried away - we have plenty of time. Put your feelings into
             it, your heart, it's your world. These trees are so much fun. I get
             started on them and I have a hard time stopping.
+            <button class="btn" onclick="modaltoggle2('9.gif')">Show Art</button>
           </div>
         </div>
         <button class="content__close">
@@ -387,5 +409,17 @@
     <script src="js/charming.min.js"></script>
     <script src="js/TweenMax.min.js"></script>
     <script src="js/demo.js"></script>
+    <script>
+      const modalElem2 = document.getElementById('modal2');
+      var x = 1;
+      function modaltoggle2(image_path){
+        document.getElementById('modal2').classList.toggle('show');
+        document.getElementById('modal-img').setAttribute('src',`./img/${image_path}`);
+      }
+      function callFull() {
+          document.getElementsByTagName('body')[0].requestFullscreen()
+          document.getElementById('modal1').remove()
+      }
+    </script>
   </body>
 </html>
