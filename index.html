@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-      CodePen - Vertical image loop with scroll acceleration with gsap
+      WDCT Corner
     </title>
     <link
       rel="stylesheet"
@@ -33,13 +34,7 @@
         >
       </h1>
 
-      <h2 class="credit">
-        <a href="#" target="_blank"
-          >Made by Arya Sah</a
-        >
-      </h2>
     </section>
-
     <div id="gallery" class="gallery">
       <div class="col">
         <div class="image">
@@ -131,18 +126,20 @@
             console.log("loaded");
             setTimeout(() => {
                 loadend();
-            }, 11300);
+            }, 4000);
         } else {
             console.log("not loaded");
             setTimeout(() => {
                 loadend();
-            }, 11300);
+            }, 4000);
         }
     };
       function loadend() {
+        document.getElementsByTagName('body')[0].style.overflowY="visible"
         document.getElementById('three-container').style.display= "none";
-        document.getElementById('gallery').style.opacity= 1;
+        
         document.getElementById('welcome-section').style.display= "flex";
+        document.getElementById('gallery').style.display= "flex";
     }
     </script>
   </body>

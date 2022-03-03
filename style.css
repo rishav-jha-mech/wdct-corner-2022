@@ -1,36 +1,55 @@
+#three-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 200000000000000000 !important;
+  right: 0;
+  transition: 1s;
+  animation: fade 1s ease;
+  animation-delay: 3.5s;
+}
+@keyframes fade {
+  from{
+    opacity: 1;
+  }to{
+    opacity: 0;
+  }
+}
+#welcome-section,
+#gallery{
+  animation: revfade 1s ease;
+}
+
+@keyframes revfade {
+  from{
+    opacity: 0.5;
+  }to{
+    opacity: 1.0;
+  }
+}
 body {
   font-family: Termina, sans-serif;
   color: #111;
+  height: 100vh;
+  overflow-y: hidden;
   background: #eee;
   overflow-x: hidden;
 }
-
+::-webkit-scrollbar{
+  display: none;
+}
 section {
   padding: 10vw;
   height: 100%;
   min-height: 500vh;
   overflow: visible;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   overflow-y: visible;
   z-index: 1;
 }
-
-.credit {
-  text-align: center;
-  z-index: 999;
-  font-size: 0.8rem;
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-}
-.credit a {
-  color: #fff;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -40,10 +59,9 @@ section h1 {
   margin: 2rem auto;
   font-size: clamp(3vw, 2rem, 4rem);
   text-align: center;
-  z-index: 999;
+  z-index: 9;
   max-width: 800px;
   mix-blend-mode: difference;
-  /* pointer-events: none; */
   color: gray;
   position: fixed;
   top: 0;
@@ -53,19 +71,9 @@ section h1 {
   display: grid;
   place-items: center;
 }
-#three-container{
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 2000000000000;
-  right: 0;
-  z-index: 5;
-}
 .gallery {
   z-index: 1;
   display: flex;
-  opacity: 0;
   flex-direction: row;
   justify-content: center;
   width: 100%;
