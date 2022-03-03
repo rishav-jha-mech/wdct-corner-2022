@@ -43,7 +43,7 @@ section h1 {
   z-index: 999;
   max-width: 800px;
   mix-blend-mode: difference;
-  pointer-events: none;
+  /* pointer-events: none; */
   color: gray;
   position: fixed;
   top: 0;
@@ -65,6 +65,7 @@ section h1 {
 .gallery {
   z-index: 1;
   display: flex;
+  opacity: 0;
   flex-direction: row;
   justify-content: center;
   width: 100%;

@@ -19,19 +19,22 @@
     <section id="welcome-section">
       <h1 style="font-size: 8rem; color: gray">
         WDCT Corner
-        <span
+        <a
+          href="/home.html"
           style="
+            text-decoration :none;
+            color:inherit;
             font-size: 2rem;
             color: darkgray;
             top: 500px;
             position: absolute;
           "
-          >Enter Room</span
+          >Enter Room</a
         >
       </h1>
 
       <h2 class="credit">
-        <a href="https://thisisadvantage.com" target="_blank"
+        <a href="#" target="_blank"
           >Made by Arya Sah</a
         >
       </h2>
@@ -41,19 +44,19 @@
       <div class="col">
         <div class="image">
           <img
-            src="https://images.pexels.com/photos/10324713/pexels-photo-10324713.jpeg?cs=srgb&dl=pexels-taha-samet-arslan-10324713.jpg&fm=jpg?auto=compress&cs=tinysrgb&h=650&w=940%20940w"
+            src="/img/1.jpg"
             alt=""
           />
         </div>
         <div class="image">
           <img
-            src="https://images.pexels.com/photos/10533885/pexels-photo-10533885.jpeg?auto=compress&cs=tinysrgb&h=650&w=940%20940w"
+          src="/img/2.jpg"
             alt=""
           />
         </div>
         <div class="image">
           <img
-            src="https://images.pexels.com/photos/10253213/pexels-photo-10253213.jpeg?cs=srgb&dl=pexels-beepin-10253213.jpg&fm=jpg?auto=compress&cs=tinysrgb&h=650&w=940%20940w"
+          src="/img/9.gif"
             alt=""
           />
         </div>
@@ -138,7 +141,7 @@
     };
       function loadend() {
         document.getElementById('three-container').style.display= "none";
-        // document.getElementById('gallery').style.display= "flex";
+        document.getElementById('gallery').style.opacity= 1;
         document.getElementById('welcome-section').style.display= "flex";
     }
     </script>
