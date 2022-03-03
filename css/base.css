@@ -3,8 +3,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 *::after,
 *::before {
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
 }
-
 body {
 	--color-text: #f1f1f1;
     --color-bg: #0c0c0c;
@@ -20,6 +20,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	padding-top: 10rem;
+	user-select: none !important;
+	
 }
 
 /* Page Loader */
@@ -119,7 +121,7 @@ a:focus {
 	z-index: 100;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-end;
 }
 
 .codrops-header__title {
@@ -127,7 +129,7 @@ a:focus {
 	font-weight: normal;
 	line-height: 1;
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-end;
 	align-items: center;
 	margin: 0;
 }
@@ -157,12 +159,11 @@ a:focus {
 	padding: 0.25em;
 	margin: 0.25em 0 0 0;
 }
-
 .slideshow {
 	position: relative;
 	overflow: hidden;
 	margin: 0;
-	height: 100vh;
+	height: 100vh !important;
 	width: 100%;
 	height: calc(100vh - 10rem);
 	display: grid;
@@ -422,8 +423,8 @@ a:focus {
 	}
 	.slideshow {
 		height: 100vh;
-		grid-template-columns: 27% 27% 27%;
-		grid-column-gap: 9.5%;
+		grid-template-columns: 33% 33% 33%;
+		grid-column-gap: 2%;
 	}
 	.slide {
 		padding: 10vh 0 7vh;
@@ -492,5 +493,18 @@ a:focus {
 		column-gap: 2rem;
 		max-width: 600px;
 		text-align: justify;
+	}
+}
+@media (max-width:1000px) {
+	.codrops-header {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+	}
+	.slide__number{
+		display: none;
+	}
+	.frame{
+		top: 0;
 	}
 }
