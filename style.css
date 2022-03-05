@@ -1,4 +1,4 @@
-#three-container{
+#three-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -9,23 +9,79 @@
   animation: fade 1s ease;
   animation-delay: 3.5s;
 }
+.entergallery
+{
+  font-size: 2.0rem !important;
+  font-weight: 800;
+  margin: 4rem auto;
+  font-size: clamp(3vw, 2rem, 4rem);
+  text-align: center;
+  z-index: 999;
+  max-width: 800px;
+  mix-blend-mode: difference;
+  color: gray;
+  position: fixed;
+  top: 15%;
+  text-decoration: none;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  animation: zoom 2s ease;
+  animation-delay: 4s;
+}
+@media screen and (max-width: 650px) {
+  #three-container {
+    display: none;
+  }
+  #welcome-section {
+    animation: none !important;
+  }
+  section h1 {
+    animation-delay: 0s !important;
+  }
+  .entergallery
+  {
+    font-size: 1.5rem !important;
+    font-weight: 800;
+    margin: 4rem auto;
+    font-size: clamp(3vw, 2rem, 4rem);
+    text-align: center;
+    z-index: 999;
+    max-width: 600px;
+    mix-blend-mode: difference;
+    color: gray;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    animation: zoom 2s ease;
+    animation-delay: 4s;
+  }
+}
 @keyframes fade {
-  from{
+  from {
     opacity: 1;
-  }to{
+  }
+  to {
     opacity: 0;
   }
 }
 #welcome-section,
-#gallery{
+#gallery {
   animation: revfade 1s ease;
 }
 
 @keyframes revfade {
-  from{
+  from {
     opacity: 0.5;
-  }to{
-    opacity: 1.0;
+  }
+  to {
+    opacity: 1;
   }
 }
 body {
@@ -36,7 +92,7 @@ body {
   background: #eee;
   overflow-x: hidden;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 section {
@@ -74,11 +130,12 @@ section h1 {
   animation: zoom 2s ease;
   animation-delay: 4s;
 }
-@keyframes zoom{
-  from{
+@keyframes zoom {
+  from {
     transform: scale(0.1);
     opacity: 0;
-  }to{
+  }
+  to {
     opacity: 1;
     transform: scale(1);
   }
@@ -130,6 +187,9 @@ section h1 {
 img {
   transition: 0.3s ease-out;
   overflow: hidden;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
   width: 100%;
 }
