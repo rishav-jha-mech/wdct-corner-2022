@@ -57,10 +57,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    display: grid;
-    place-items: center;
+    /* display: grid;
+    place-items: center; */
     animation: zoom 2s ease;
-    animation-delay: 4s;
+    animation-delay: 0s;
   }
 }
 @keyframes fade {
