@@ -279,14 +279,14 @@ arya.map((content, index) => {
         </div>
     <div class="slide__side">WDCT CORNER</div>
     <div class="slide__title-wrap">
-        <span class="slide__number">${arya.length - index}</span>
+        <span class="slide__number">${index+1}</span>
         <h3 class="slide__title">${name}</h3>
         <h4 class="slide__subtitle"></h4>
     </div>
     `;
 
     divContent.innerHTML = `
-    <span class="content__number">${arya.length - index}</span>
+    <span class="content__number">${index+1}</span>
     <h3 class="content__title">${name}</h3>
     <h4 class="content__subtitle"></h4>
     <div class="content__text">
