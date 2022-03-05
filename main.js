@@ -266,7 +266,7 @@ arya.map((content, index) => {
     const divSlide = document.createElement('div');
 
     const img_path = `${window.location.origin}/all_images/${content.img}`;
-    const name= content.name.toLowerCase()
+    const name = content.name.toLowerCase()
 
     divSlide.className = 'slide';
     divContent.className = 'content__item';
@@ -278,24 +278,51 @@ arya.map((content, index) => {
                 style="background-image: url('${img_path}')">
             </div>
         </div>
-    <div class="slide__side">Memories &amp; Thoughts</div>
+    <div class="slide__side">WDCT CORNER</div>
     <div class="slide__title-wrap">
-        <span class="slide__number">${index + 1}</span>
-        <h3 class="slide__title">${content.name}</h3>
+        <span class="slide__number">${arya.length - index}</span>
+        <h3 class="slide__title">${name}</h3>
         <h4 class="slide__subtitle"></h4>
     </div>
     `;
 
     divContent.innerHTML = `
-    <span class="content__number">${index + 1}</span>
-    <h3 class="content__title">${content.name}</h3>
+    <span class="content__number">${arya.length - index}</span>
+    <h3 class="content__title">${name}</h3>
     <h4 class="content__subtitle"></h4>
     <div class="content__text">
       <button class="btn" onclick="modaltoggle2('${img_path}')">Show Art</button>
     </div>
     `;
 
-    slide.prepend(divSlide);
-    Thecontent.prepend(divContent);
-
+    slide.appendChild(divSlide);
+    Thecontent.appendChild(divContent);
 })
+
+// I know at this moment how this code is working, the only thing you need to dois to arrange the divs and elements in right order and thats what we are going todo
+
+// After the above cod has run append buttons
+const btn1 = document.createElement('button');
+const btn2 = document.createElement('button');
+const btn3 = document.createElement('button');
+btn1.className = 'nav nav--prev';
+btn2.className = 'nav nav--next';
+btn1.innerHTML = `
+    <svg class="icon icon--navarrow-prev">
+    <use xlink:href="#icon-navarrow"></use>
+    </svg>`;
+btn2.innerHTML = `
+    <svg class="icon icon--navarrow-next">
+    <use xlink:href="#icon-navarrow"></use>
+    </svg>
+    `;
+slide.appendChild(btn1);
+slide.appendChild(btn2);
+
+btn3.className = 'content__close'
+btn3.innerHTML = `
+    <svg class="icon icon--longarrow">
+        <use xlink:href="#icon-longarrow"></use>
+    </svg>
+`
+Thecontent.appendChild(btn3)
