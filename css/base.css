@@ -447,13 +447,13 @@ a:focus {
 	{
 		display: block !important;
 		position: absolute;
-		bottom:20vh;
+		bottom:10vh;
 		font-size: 2.5rem;
 		padding:20px;
 	}
 	.nav--next {
 		position: absolute;
-		bottom: 14rem;
+		bottom: 1rem;
 		right: 1rem;
 	}
 }
