@@ -261,12 +261,11 @@ const Thecontent = document.getElementById('genuine_content');
 
 arya.map((content, index) => {
 
-    console.log(content.img);
     const divContent = document.createElement('div');
     const divSlide = document.createElement('div');
 
-    const img_path = `${window.location.origin}/all_images/${content.img}`;
-    const name = content.name.toLowerCase()
+    const img_path = `./all_images/${content.img}`;
+    const name = content.name
 
     divSlide.className = 'slide';
     divContent.className = 'content__item';

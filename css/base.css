@@ -136,7 +136,8 @@ a:focus {
 }
 .codrops-header__title a .title_logo
 {
-	width: 40px;
+	width:  70px;
+	border-radius: 50%;
 	margin:0px;
 	margin-right: 5px;
 }
@@ -383,10 +384,13 @@ a:focus {
 
 .content__title {
 	margin: 0.5rem 0;
-	text-transform: capitalize;
-	font-size: 2rem;
+	/* text-transform: capitalize; */
+	font-size: 4rem;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
-
+.content__number{
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
 .content__subtitle {
 	margin: 0 0 0.5rem;
 	font-size: 1rem;
@@ -481,7 +485,8 @@ a:focus {
 	}
 	.codrops-header {
 		grid-area: header;
-		padding: 1rem 0.5rem;
+		padding: 0.1rem 0.5rem;
+		margin-top: -1rem;
 		display: block;
 	}
 	.codrops-header__title {
@@ -514,7 +519,7 @@ a:focus {
 	.slide__title {
 		font-size: 3.25rem;
 		margin: 0 0 0.25rem;
-		text-transform: capitalize;
+		/* text-transform: capitalize; */
 	}
 	.slide__subtitle {
 		font-weight: normal;
@@ -565,6 +570,11 @@ a:focus {
 		text-align: justify;
 	}
 }
+@media (min-width:1000px) {
+	.codrops-header__title{
+		font-size: 1.25rem;
+	}
+}
 @media (max-width:1000px) {
 	.codrops-header {
 		position: absolute;
@@ -579,16 +589,16 @@ a:focus {
 	}
 }
 .btn{
-	margin-top: 1rem;
-	padding: 10px 20px;
+	margin-top: 2rem;
+	padding: 0.8rem 2rem;
 	border-radius: 6px;
 	outline: none;
 	border: none;
 	display: none;
 	background: #000;
-	color: dodgerblue;
-	border: 1px solid dodgerblue;
-	font-size: 1rem;
+	color: aqua;
+	border: 1px solid aqua;
+	font-size: 1.1rem;
 }
 @media (max-width:1000px){
 	.btn{
@@ -655,8 +665,8 @@ a:focus {
 }
 .modal-card img{
 	width: 100%;
+	max-height: 80vh;
 	object-fit: contain;
-	max-height: 500px;
 	border-radius: 8px;
 }
 .overlay .modal-card{
